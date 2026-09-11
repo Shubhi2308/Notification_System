@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://notification-system-app.onrender.com";
+const API_BASE_URL = "https://notification-system-app.onrender.com/api";
 
 async function getCsrfToken() {
     const response = await fetch(
