@@ -122,16 +122,14 @@ CSRF_TRUSTED_ORIGINS = [
     "http://127.0.0.1:5173",
     "https://notification-system-lemon.vercel.app",
 ]
-# Allow Django session authentication to work from the Vercel frontend
-SESSION_COOKIE_SAMESITE = "None"
-SESSION_COOKIE_SECURE = True
 
-# Allow CSRF cookie to work with the Vercel frontend
-CSRF_COOKIE_SAMESITE = "None"
-CSRF_COOKIE_SECURE = True
-# Internationalization
-# https://docs.djangoproject.com/en/6.1/topics/i18n/
+if not DEBUG:
+    SESSION_COOKIE_SAMESITE = "None"
+    SESSION_COOKIE_SECURE = True
 
+    CSRF_COOKIE_SAMESITE = "None"
+    CSRF_COOKIE_SECURE = True
+    
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
