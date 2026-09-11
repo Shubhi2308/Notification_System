@@ -128,8 +128,7 @@ if not DEBUG:
     SESSION_COOKIE_SECURE = True
 
     CSRF_COOKIE_SAMESITE = "None"
-    CSRF_COOKIE_SECURE = True
-    
+    CSRF_COOKIE_SECURE = True 
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
