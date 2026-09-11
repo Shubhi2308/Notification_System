@@ -25,7 +25,7 @@ load_dotenv(BASE_DIR / ".env")
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-b1x4fcg#+l#ha6%@3&hh5xh+2vy!_ytmsyotx#g1amop2k^-=_'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     "localhost",
@@ -123,12 +123,11 @@ CSRF_TRUSTED_ORIGINS = [
     "https://notification-system-lemon.vercel.app",
 ]
 
-if not DEBUG:
-    SESSION_COOKIE_SAMESITE = "None"
-    SESSION_COOKIE_SECURE = True
+SESSION_COOKIE_SAMESITE = "None"
+SESSION_COOKIE_SECURE = True
 
-    CSRF_COOKIE_SAMESITE = "None"
-    CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = "None"
+CSRF_COOKIE_SECURE = True
     
 LANGUAGE_CODE = 'en-us'
 
